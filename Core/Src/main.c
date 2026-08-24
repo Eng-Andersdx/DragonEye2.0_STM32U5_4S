@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "dragoneye_leds.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,6 +105,178 @@ static void MX_TIM3_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+
+
+void DSI_IO_WriteCmd(uint32_t NbrParams, uint8_t *pParams) {
+    if (NbrParams == 0) {
+        HAL_DSI_ShortWrite(&hdsi, 0, DSI_DCS_SHORT_PKT_WRITE_P0, pParams[0], 0);
+    } else if (NbrParams == 1) {
+        HAL_DSI_ShortWrite(&hdsi, 0, DSI_DCS_SHORT_PKT_WRITE_P1, pParams[0], pParams[1]);
+    } else {
+        HAL_DSI_LongWrite(&hdsi, 0, DSI_DCS_LONG_PKT_WRITE, NbrParams, pParams[NbrParams], pParams);
+    }
+}
+void LCD_ST7701S_Init(void)
+{
+	/* MIPI_DCS_SOFT_RESET (0x01) � clears register state. */
+	const uint8_t ShortRegData_SoftReset[] = {0x01, 0x00};
+	DSI_IO_WriteCmd(0, (uint8_t *)ShortRegData_SoftReset);
+	HAL_Delay(10);   /* Datasheet: =5 ms after soft reset */
+
+	/* MIPI_DCS_EXIT_SLEEP_MODE (0x11) */
+	const uint8_t ShortRegData1[] = {0x11, 0x00};
+	DSI_IO_WriteCmd(0, (uint8_t *)ShortRegData1);
+	HAL_Delay(120);  /* Datasheet: =120 ms after Sleep Out */
+
+	/* ... all the register writes ... */
+
+	const uint8_t ShortRegData2[]  = {0x3A, 0x77};
+	DSI_IO_WriteCmd(1, (uint8_t *)ShortRegData2);
+
+	const uint8_t ShortRegData3[]  = {0x77, 0x01, 0x00, 0x00, 0x13, 0xFF};  //Command2_BK3
+	DSI_IO_WriteCmd(5, (uint8_t *)ShortRegData3);
+
+	const uint8_t ShortRegData4[]  = {0xEF, 0x08};
+	DSI_IO_WriteCmd(1, (uint8_t *)ShortRegData4);
+
+	//------------------------------------------Bank0 Setting----------------------------------------------------//
+	const uint8_t ShortRegData5[]  = {0x77, 0x01, 0x00, 0x00, 0x10, 0xFF};  //Command2_BK0
+	DSI_IO_WriteCmd(5, (uint8_t *)ShortRegData5);
+
+	//------------------------------------Display Control setting------------------------------------------------//
+	const uint8_t ShortRegData6[]  = {0x3B, 0x00, 0xC0};
+	DSI_IO_WriteCmd(2, (uint8_t *)ShortRegData6);
+
+	const uint8_t ShortRegData7[]  = {0x0D, 0x02, 0xC1};
+	DSI_IO_WriteCmd(2, (uint8_t *)ShortRegData7);
+
+	const uint8_t ShortRegData8[]  = {0x21, 0x08, 0xC2};
+	DSI_IO_WriteCmd(2, (uint8_t *)ShortRegData8);
+
+	const uint8_t ShortRegData9[]  = {0x80, 0x3A, 0x1A, 0xC3};
+	DSI_IO_WriteCmd(3, (uint8_t *)ShortRegData9);
+
+	const uint8_t ShortRegData10[]  = {	0x00, 0x11, 0x18, 0x0E, 0x11,
+										0x06, 0x07, 0x08, 0x07, 0x22,
+										0x04, 0x12, 0x0F, 0xAA, 0x31,
+										0x18, 0xB0};
+	DSI_IO_WriteCmd(16, (uint8_t *)ShortRegData10);
+
+	const uint8_t ShortRegData11[]  = {	0x00, 0x11, 0x19, 0x0E, 0x12,
+										0x07, 0x08, 0x08, 0x08, 0x22,
+										0x04, 0x11, 0x11, 0xA9, 0x32,
+										0x18, 0xB1};
+	DSI_IO_WriteCmd(16, (uint8_t *)ShortRegData11);
+
+	//------------------------------------------Bank1 Setting----------------------------------------------------//
+	const uint8_t ShortRegData12[]  = {0x77, 0x01, 0x00, 0x00, 0x11, 0xFF};  //Command2_BK1
+	DSI_IO_WriteCmd(5, (uint8_t *)ShortRegData12);
+
+	const uint8_t ShortRegData13[]  = {0xB0, 0x60};
+	DSI_IO_WriteCmd(1, (uint8_t *)ShortRegData13);
+
+	const uint8_t ShortRegData14[]  = {0xB1, 0x30};
+	DSI_IO_WriteCmd(1, (uint8_t *)ShortRegData14);
+
+	const uint8_t ShortRegData15[]  = {0xB2, 0x87};
+	DSI_IO_WriteCmd(1, (uint8_t *)ShortRegData15);
+
+	const uint8_t ShortRegData16[]  = {0xB3, 0x80};
+	DSI_IO_WriteCmd(1, (uint8_t *)ShortRegData16);
+
+	const uint8_t ShortRegData17[]  = {0xB5, 0x49};
+	DSI_IO_WriteCmd(1, (uint8_t *)ShortRegData17);
+
+	const uint8_t ShortRegData18[]  = {0xB7, 0x85};
+	DSI_IO_WriteCmd(1, (uint8_t *)ShortRegData18);
+
+	const uint8_t ShortRegData19[]  = {0xB8, 0x21};
+	DSI_IO_WriteCmd(1, (uint8_t *)ShortRegData19);
+
+	const uint8_t ShortRegData20[]  = {0xC1, 0x78};
+	DSI_IO_WriteCmd(1, (uint8_t *)ShortRegData20);
+
+	const uint8_t ShortRegData21[]  = {0xC2, 0x78};
+	DSI_IO_WriteCmd(1, (uint8_t *)ShortRegData21);
+
+	const uint8_t ShortRegData22[]  = {0x00, 0x1B, 0x02, 0xE0};
+	DSI_IO_WriteCmd(3, (uint8_t *)ShortRegData22);
+
+	const uint8_t ShortRegData23[]  = {	0x08, 0xA0, 0x00, 0x00, 0x07,
+										0xA0, 0x00, 0x00, 0x00, 0x44,
+										0x44, 0xE1};
+	DSI_IO_WriteCmd(11, (uint8_t *)ShortRegData23);
+
+	const uint8_t ShortRegData24[]  = {	0x11, 0x11, 0x44, 0x44, 0xED,
+										0xA0, 0x00, 0x00, 0xEC, 0xA0,
+										0x00, 0x00, 0xE2};
+	DSI_IO_WriteCmd(12, (uint8_t *)ShortRegData24);
+
+	const uint8_t ShortRegData25[]  = {0x00, 0x00, 0x11, 0x11, 0xE3};
+	DSI_IO_WriteCmd(4, (uint8_t *)ShortRegData25);
+
+	const uint8_t ShortRegData26[]  = {0x44, 0x44, 0xE4};
+	DSI_IO_WriteCmd(2, (uint8_t *)ShortRegData26);
+
+	const uint8_t ShortRegData27[]  = {	0x0A, 0xE9, 0xD8, 0xA0, 0x0C,
+										0xEB, 0xD8, 0xA0, 0x0E, 0xED,
+										0xD8, 0xA0, 0x10, 0xEF, 0xD8,
+										0xA0, 0xE5};
+	DSI_IO_WriteCmd(16, (uint8_t *)ShortRegData27);
+
+	const uint8_t ShortRegData28[]  = {0x00, 0x00, 0x11, 0x11, 0xE6};
+	DSI_IO_WriteCmd(4, (uint8_t *)ShortRegData28);
+
+	const uint8_t ShortRegData29[]  = {0x44, 0x44, 0xE7};
+	DSI_IO_WriteCmd(2, (uint8_t *)ShortRegData29);
+
+	const uint8_t ShortRegData30[]  = {	0x09, 0xE8, 0xD8, 0xA0, 0x0B,
+										0xEA, 0xD8, 0xA0, 0x0D, 0xEC,
+										0xD8, 0xA0, 0x0F, 0xEE, 0xD8,
+										0xA0, 0xE8};
+	DSI_IO_WriteCmd(16, (uint8_t *)ShortRegData30);
+
+	const uint8_t ShortRegData31[]  = {	0x02, 0x00, 0xE4, 0xE4, 0x88,
+										0x00, 0x40, 0xEB};
+	DSI_IO_WriteCmd(7, (uint8_t *)ShortRegData31);
+
+	const uint8_t ShortRegData32[]  = {0x3C, 0x00, 0xEC};
+	DSI_IO_WriteCmd(2, (uint8_t *)ShortRegData32);
+
+	const uint8_t ShortRegData33[]  = {	0xAB, 0x89, 0x76, 0x54, 0x02,
+										0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+										0xFF, 0x20, 0x45, 0x67, 0x98,
+										0xBA, 0xED};
+	DSI_IO_WriteCmd(16, (uint8_t *)ShortRegData33);
+
+	const uint8_t ShortRegData34[]  = {	0x10, 0x0D, 0x04, 0x08, 0x3F,
+										0x1F, 0xEF};
+	DSI_IO_WriteCmd(6, (uint8_t *)ShortRegData34);
+
+	// Note: BK2 (writeReg 0xFF ...0x12, 0xD1, 0xD2) is intentionally NOT written here.
+	// The panel-vendor reference init script for the YTC400KLAA-04-100C has these
+	// commented out, and enabling them with the reference values causes the panel
+	// to display only thin bars at the screen edges. Leave commented out.
+
+	//------------------------------------------No Bank Setting----------------------------------------------------//
+	const uint8_t ShortRegData35[]  = {0x77, 0x01, 0x00, 0x00, 0x00, 0xFF};  //Command2_BKx OFF
+	DSI_IO_WriteCmd(5, (uint8_t *)ShortRegData35);
+
+
+
+	  /* Second Sleep Out before Display On */
+	const uint8_t ShortRegData36[]  = {0x11, 0x00};
+	DSI_IO_WriteCmd(0, (uint8_t *)ShortRegData36);
+	HAL_Delay(120);  /* Datasheet: =120 ms */
+
+	/* Display On */
+	const uint8_t ShortRegData37[]  = {0x29, 0x00};
+	DSI_IO_WriteCmd(0, (uint8_t *)ShortRegData37);
+
+	HAL_Delay(20);  /* Post-Display-On settle (datasheet: =10 ms) */
+}
+
+
 /* USER CODE END 0 */
 
 /**
@@ -161,6 +334,9 @@ int main(void)
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
 
+  // Enable PWN for BackLight
+  BSP_BL_PWM_Init(&htim2, TIM_CHANNEL_1);
+  BSP_BL_SetIntensity(100); //Set Intensity to 100, Maximum Brightness
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -418,6 +594,21 @@ static void MX_DSIHOST_DSI_Init(void)
 
   /* USER CODE BEGIN DSIHOST_Init 0 */
 
+	  /* Power-rail settle. On cold boot VCI/IOVCC may still be ramping when we
+	     get here. Helps prevent RESX being asserted on a partially-powered chip. */
+	  HAL_Delay(10);
+
+	  /* HW reset pulse. RESX low width must be =10 �s per datasheet; 10 ms is
+	     plenty of margin and signal-integrity-safe even on long FPCs. */
+	  HAL_GPIO_WritePin(LCD_RESET_GPIO_Port, LCD_RESET_Pin, GPIO_PIN_RESET);
+	  HAL_Delay(20);
+	  HAL_GPIO_WritePin(LCD_RESET_GPIO_Port, LCD_RESET_Pin, GPIO_PIN_SET);
+
+	  /* Datasheet: =120 ms between RESX rising edge and the first DCS command.
+	     We allow 200 ms � the rest of init (DSI config + LTDC + ST7701 first DCS)
+	     takes more than that anyway, so this is effectively the strap-latch margin. */
+	  HAL_Delay(120);
+
   /* USER CODE END DSIHOST_Init 0 */
 
   DSI_PLLInitTypeDef PLLInit = {0};
@@ -511,8 +702,36 @@ static void MX_DSIHOST_DSI_Init(void)
   }
   /* USER CODE BEGIN DSIHOST_Init 2 */
 
-  /* USER CODE END DSIHOST_Init 2 */
+  if (HAL_DSI_Start(&hdsi) != HAL_OK)
+  {
+	  Error_Handler();
+  }
 
+  /* Switch DSI byte clock source from PLL3P to the internal DSI PHY PLL.
+      *
+      * Required: PLL3P-sourced byte clock causes occasional cold-boot flickering
+      * because the DSI byte clock domain and HS lane bit-rate domain become
+      * two physically separate clocks, with random phase on every boot. CDC
+      * synchronizer races inside the DSI host then produce intermittent
+      * bit slips.
+      *
+      * Switching to DSIPHY makes both domains share a single VCO, eliminating
+      * the race. CubeMX cannot generate this configuration directly because
+      * the DSI PHY PLL doesn't exist as a clock source until HAL_DSI_Init()
+      * has run � hence the manual override here after DSI is up.
+  */
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_DSI;
+  PeriphClkInit.DsiClockSelection    = RCC_DSICLKSOURCE_DSIPHY;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK) {
+         Error_Handler();
+     }
+  /* DSI PHY HS-mode lane lock + clock stabilization. Empirically ~250 ms is
+     needed for reliable first-DCS reception on this board (cold-boot worst
+     case). Below this, marginal lots show occasional flickering reboots. */
+  HAL_Delay(5);
+
+  /* USER CODE END DSIHOST_Init 2 */
 }
 
 /**
@@ -775,6 +994,10 @@ static void MX_LTDC_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN LTDC_Init 2 */
+
+
+  //LCD Intializion
+  LCD_ST7701S_Init();
 
   /* USER CODE END LTDC_Init 2 */
 
