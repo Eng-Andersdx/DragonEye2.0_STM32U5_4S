@@ -105,7 +105,7 @@ static void MX_TIM3_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-
+extern volatile uint8_t Touch_Event_Flag;
 
 void DSI_IO_WriteCmd(uint32_t NbrParams, uint8_t *pParams) {
     if (NbrParams == 0) {
@@ -273,9 +273,26 @@ void LCD_ST7701S_Init(void)
 	const uint8_t ShortRegData37[]  = {0x29, 0x00};
 	DSI_IO_WriteCmd(0, (uint8_t *)ShortRegData37);
 
-	HAL_Delay(20);  /* Post-Display-On settle (datasheet: =10 ms) */
+	HAL_Delay(20);  /* Post-Display-On settle (datasheet: ≥10 ms) */
 }
 
+
+/* encoder interrupt callback */
+void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin){
+	HAL_GPIO_EXTI_Callback(GPIO_Pin);
+}
+
+void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin){
+	HAL_GPIO_EXTI_Callback(GPIO_Pin);
+}
+
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if(GPIO_Pin==LCD_TOUCH_INT_Pin) {
+		Touch_Event_Flag = 1;
+	}
+}
 
 /* USER CODE END 0 */
 
