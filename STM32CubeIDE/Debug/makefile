@@ -17,6 +17,7 @@ RM := rm -rf
 -include Application/User/gui/subdir.mk
 -include Application/User/generated/subdir.mk
 -include Application/User/TouchGFX/target/generated/subdir.mk
+-include Application/User/TouchGFX/target/DragonEye/Components/subdir.mk
 -include Application/User/TouchGFX/target/DragonEye/subdir.mk
 -include Application/User/TouchGFX/target/subdir.mk
 -include Application/User/TouchGFX/App/subdir.mk
