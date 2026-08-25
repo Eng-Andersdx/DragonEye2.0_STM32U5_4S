@@ -5,10 +5,199 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_T9MF" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Swipe up</Translation>
+      </Text>
+      <Text Id="time_remaining_wc" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">-4:28</Translation>
+      </Text>
+      <Text Id="time_elapsed_wc" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">0:00</Translation>
+      </Text>
+      <Text Id="__SingleUse_72EN" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JMQD" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="music_artist_large" Alignment="Left" TypographyId="Light_19">
+        <Translation Language="GB">Fleetwood Mac</Translation>
+      </Text>
+      <Text Id="music_track_large" Alignment="Left" TypographyId="Light_19">
+        <Translation Language="GB">The Chain</Translation>
+      </Text>
+      <Text Id="__SingleUse_T5IQ" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_A37C" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_FQ0V" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CTZD" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Music</Translation>
+      </Text>
+      <Text Id="alarm_status" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Online</Translation>
+      </Text>
+      <Text Id="back_door_status" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Locked</Translation>
+      </Text>
+      <Text Id="__SingleUse_WXCT" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_6US7" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Alarm system</Translation>
+      </Text>
+      <Text Id="__SingleUse_QDHN" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4K3I" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Garage</Translation>
+      </Text>
+      <Text Id="garage_status" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Locked</Translation>
+      </Text>
+      <Text Id="__SingleUse_4NY4" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_G75F" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Back door</Translation>
+      </Text>
+      <Text Id="front_door_status" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">Locked</Translation>
+      </Text>
+      <Text Id="__SingleUse_4XFU" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_QVWS" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Front door</Translation>
+      </Text>
+      <Text Id="__SingleUse_D3PM" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Security</Translation>
+      </Text>
+      <Text Id="__SingleUse_2O3E" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="cooling" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Cooling to 21</Translation>
+      </Text>
+      <Text Id="__SingleUse_MV05" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Conservatory</Translation>
+      </Text>
+      <Text Id="__SingleUse_668E" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Hallway</Translation>
+      </Text>
+      <Text Id="__SingleUse_IQRM" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Kitchen</Translation>
+      </Text>
+      <Text Id="__SingleUse_2WDC" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Living room</Translation>
+      </Text>
+      <Text Id="security_status" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Locked</Translation>
+      </Text>
+      <Text Id="music_artist" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Fleetwood Mac</Translation>
+      </Text>
+      <Text Id="music_track" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">The Chain</Translation>
+      </Text>
+      <Text Id="lights_" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="climate_temp" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">21</Translation>
+      </Text>
+      <Text Id="__SingleUse_STD9" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Lights</Translation>
+      </Text>
+      <Text Id="__SingleUse_GTO2" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UCER" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_RUJO" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Climate</Translation>
+      </Text>
+      <Text Id="__SingleUse_9HP6" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">Outside 26°</Translation>
+      </Text>
+      <Text Id="__SingleUse_1UQX" Alignment="Center" TypographyId="Reg_28">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="main_temp" Alignment="Left" TypographyId="Reg_99">
+        <Translation Language="GB">21</Translation>
+      </Text>
+      <Text Id="ResourceId1" Alignment="Left" TypographyId="Reg_99">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_08D4" Alignment="Center" TypographyId="Reg_99">
+        <Translation Language="GB">&lt;value&gt;°</Translation>
+      </Text>
+      <Text Id="__SingleUse_AW3P" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_9SBH" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_7FTV" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CMKS" Alignment="Center" TypographyId="Reg_22">
+        <Translation Language="GB">Front door</Translation>
+      </Text>
+      <Text Id="__SingleUse_1NXF" Alignment="Center" TypographyId="Reg_28">
+        <Translation Language="GB">On</Translation>
+      </Text>
+      <Text Id="__SingleUse_OQP1" Alignment="Center" TypographyId="Reg_50">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="climate_status" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Cooling to 21</Translation>
+      </Text>
+      <Text Id="__SingleUse_9T3V" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_KRRR" Alignment="Center" TypographyId="Reg_50">
+        <Translation Language="GB">&lt;value&gt;°</Translation>
+      </Text>
+      <Text Id="__SingleUse_CPPF" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_SO5M" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">My Home</Translation>
+      </Text>
+      <Text Id="__SingleUse_A985" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">Inside 21° • Outside 26° </Translation>
+      </Text>
+      <Text Id="__SingleUse_I3NC" Alignment="Center" TypographyId="Light_50">
+        <Translation Language="GB">26°</Translation>
+      </Text>
+      <Text Id="__SingleUse_YWNP" Alignment="Center" TypographyId="Reg_28">
+        <Translation Language="GB">Tuesday, Aug 25</Translation>
+      </Text>
+      <Text Id="__SingleUse_4W7S" Alignment="Left" TypographyId="Light_90">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_BPL1" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">v_1.2</Translation>
+      </Text>
+    </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Reg_99" Font="Inter-Regular.ttf" Size="99" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Reg_50" Font="Inter-Regular.ttf" Size="50" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Reg_28" Font="Inter-Regular.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Reg_22" Font="Inter-Regular.ttf" Size="22" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Reg_19" Font="Inter-Regular.ttf" Size="19" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Reg_15" Font="Inter-Regular.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" WidgetWildcardCharacters="0123456789 :APM" />
+    <Typography Id="Light_90" Font="Inter-Light.ttf" Size="90" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" WidgetWildcardCharacters="0123456789 :APM" />
+    <Typography Id="Light_50" Font="Inter-Light.ttf" Size="50" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Light_19" Font="Inter-Light.ttf" Size="19" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="light_12" Font="Inter-Light.ttf" Size="12" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
   </Typographies>
 </TextDatabase>

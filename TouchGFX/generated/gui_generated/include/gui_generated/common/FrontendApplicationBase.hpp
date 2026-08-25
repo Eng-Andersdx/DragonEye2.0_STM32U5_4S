@@ -17,25 +17,63 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoscreenScreenNoTransition();
+        gotoSplashScreenNoTransition();
     }
 
-    // screen
-    void gotoscreenScreenNoTransition();
+    // Splash
+    void gotoSplashScreenNoTransition();
 
-    // screen_1
-    void gotoscreen_1ScreenNoTransition();
+    // Default
+    void gotoDefaultScreenNoTransition();
+
+    void gotoDefaultScreenSlideTransitionWest();
+
+    // Main
+    void gotoMainScreenCoverTransitionSouth();
+
+    void gotoMainScreenSlideTransitionWest();
+
+    // Climate
+    void gotoClimateScreenCoverTransitionEast();
+
+    // Lights
+    void gotoLightsScreenCoverTransitionEast();
+
+    // Security
+    void gotoSecurityScreenCoverTransitionEast();
+
+    // Music
+    void gotoMusicScreenCoverTransitionEast();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
 
-    // screen
-    void gotoscreenScreenNoTransitionImpl();
+    // Splash
+    void gotoSplashScreenNoTransitionImpl();
 
-    // screen_1
-    void gotoscreen_1ScreenNoTransitionImpl();
+    // Default
+    void gotoDefaultScreenNoTransitionImpl();
+
+    void gotoDefaultScreenSlideTransitionWestImpl();
+
+    // Main
+    void gotoMainScreenCoverTransitionSouthImpl();
+
+    void gotoMainScreenSlideTransitionWestImpl();
+
+    // Climate
+    void gotoClimateScreenCoverTransitionEastImpl();
+
+    // Lights
+    void gotoLightsScreenCoverTransitionEastImpl();
+
+    // Security
+    void gotoSecurityScreenCoverTransitionEastImpl();
+
+    // Music
+    void gotoMusicScreenCoverTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

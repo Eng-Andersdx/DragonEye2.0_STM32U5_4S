@@ -2,257 +2,2446 @@
   "Application": {
     "Screens": [
       {
-        "Name": "screen",
-        "CanvasBufferSize": 7200,
+        "Name": "Splash",
         "Components": [
           {
-            "Type": "FlexButton",
-            "Name": "flexButton1",
-            "Width": 480,
-            "Height": 480,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 480,
-                "Height": 480,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
+            "Type": "Image",
+            "Name": "image1",
+            "X": 20,
+            "Y": 40,
+            "Width": 440,
+            "Height": 400,
+            "RelativeFilename": "Dragoneye_logo\\Comp 4_00027.png"
           },
           {
-            "Type": "Box",
-            "Name": "box1",
-            "Width": 480,
-            "Height": 480,
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 220,
+            "Y": 419,
+            "Width": 42,
+            "Height": 23,
+            "TextId": "__SingleUse_BPL1",
+            "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box2",
-            "X": 45,
-            "Y": 307,
-            "Width": 86,
-            "Height": 79,
-            "Color": {
-              "Red": 240,
-              "Green": 7,
-              "Blue": 7
-            }
-          },
-          {
-            "Type": "Circle",
-            "Name": "circle1",
-            "X": 210,
-            "Y": 306,
-            "Width": 80,
-            "Height": 80,
-            "Color": {
-              "Red": 15,
-              "Green": 242,
-              "Blue": 49
             },
-            "CenterX": 40.0,
-            "CenterY": 40.0,
-            "Radius": 40.0,
-            "EndAngle": 360.0,
-            "CapPrecision": "Butt"
+            "AutoSize": true
           },
           {
-            "Type": "Shape",
-            "Name": "shape1",
-            "X": 358,
-            "Y": 306,
-            "Width": 80,
-            "Height": 80,
-            "Color": {
-              "Red": 12,
-              "Green": 121,
-              "Blue": 245
-            },
-            "Points": [
-              {
-                "X": 40.0
-              },
-              {
-                "X": 80.0,
-                "Y": 40.0
-              },
-              {
-                "X": 40.0,
-                "Y": 80.0
-              },
-              {
-                "Y": 40.0
-              }
-            ],
-            "XScale": 1.0,
-            "YScale": 1.0
+            "Type": "Button",
+            "Name": "splash_skip",
+            "X": 120,
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "Alpha": 0,
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "splash_skip",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "flexButton1"
+              "TriggerComponent": "splash_skip"
             },
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "screen_1"
+              "ActionComponent": "Default"
             }
           }
         ]
       },
       {
-        "Name": "screen_1",
-        "CanvasBufferSize": 7200,
+        "Name": "Default",
         "Components": [
           {
-            "Type": "FlexButton",
-            "Name": "flexButton1",
-            "Width": 480,
-            "Height": 480,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 480,
-                "Height": 480,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
+            "Type": "Button",
+            "Name": "bg",
+            "X": -1,
+            "Width": 482,
+            "Height": 481,
+            "Pressed": "Default\\weather_background_sunny.png",
+            "Released": "Default\\weather_background_sunny.png"
           },
           {
-            "Type": "Box",
-            "Name": "box1",
-            "Width": 480,
-            "Height": 480,
+            "Type": "Image",
+            "Name": "cloud",
+            "X": 72,
+            "Y": 45,
+            "Width": 307,
+            "Height": 72,
+            "RelativeFilename": "Default\\cloud5_2.png",
+            "Alpha": 198,
+            "Moveable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "cloud_2",
+            "X": -109,
+            "Y": 60,
+            "Width": 307,
+            "Height": 72,
+            "RelativeFilename": "Default\\cloud5_2.png",
+            "Alpha": 53,
+            "Moveable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "sun",
+            "X": 45,
+            "Y": 231,
+            "Width": 68,
+            "Height": 68,
+            "RelativeFilename": "Main\\sun_large.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "swipe_up",
+            "X": 198,
+            "Y": 449,
+            "Width": 84,
+            "Height": 23,
+            "TextId": "__SingleUse_T9MF",
+            "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "box2",
-            "X": 39,
-            "Y": 68,
-            "Width": 86,
-            "Height": 79,
-            "Color": {
-              "Red": 240,
-              "Green": 7,
-              "Blue": 7
-            }
-          },
-          {
-            "Type": "Circle",
-            "Name": "circle1",
-            "X": 200,
-            "Y": 67,
-            "Width": 80,
-            "Height": 80,
-            "Color": {
-              "Red": 15,
-              "Green": 242,
-              "Blue": 49
             },
-            "CenterX": 40.0,
-            "CenterY": 40.0,
-            "Radius": 40.0,
-            "EndAngle": 360.0,
-            "CapPrecision": "Butt"
+            "AutoSize": true,
+            "Fadeable": true
           },
           {
-            "Type": "Shape",
-            "Name": "shape1",
-            "X": 358,
-            "Y": 68,
-            "Width": 80,
-            "Height": 80,
-            "Color": {
-              "Red": 12,
-              "Green": 121,
-              "Blue": 245
+            "Type": "Image",
+            "Name": "chevron_up",
+            "X": 228,
+            "Y": 432,
+            "Width": 25,
+            "Height": 13,
+            "RelativeFilename": "Default\\up_chevron.png",
+            "Fadeable": true,
+            "Moveable": true
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 45,
+            "Y": 60,
+            "Width": 227,
+            "Height": 115,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
             },
-            "Points": [
-              {
-                "X": 40.0
-              },
-              {
-                "X": 80.0,
-                "Y": 40.0
-              },
-              {
-                "X": 40.0,
-                "Y": 80.0
-              },
-              {
-                "Y": 40.0
-              }
-            ],
-            "XScale": 1.0,
-            "YScale": 1.0
+            "TextId": "__SingleUse_4W7S",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Date",
+            "X": 49,
+            "Y": 158,
+            "Width": 223,
+            "Height": 34,
+            "TextId": "__SingleUse_YWNP",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "inside_outside_temp",
+            "X": 45,
+            "Y": 306,
+            "Width": 222,
+            "Height": 23,
+            "TextId": "__SingleUse_A985",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "temp",
+            "X": 130,
+            "Y": 236,
+            "Width": 84,
+            "Height": 60,
+            "TextId": "__SingleUse_I3NC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "change_screen",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "flexButton1"
+              "TriggerComponent": "bg"
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "screen"
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "Main"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Main",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "myhome",
+            "X": 206,
+            "Y": 7,
+            "Width": 68,
+            "Height": 18,
+            "TextId": "__SingleUse_SO5M",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 426,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_CPPF",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "Button",
+            "Name": "Climate",
+            "X": 15,
+            "Y": 43,
+            "Width": 222,
+            "Height": 167,
+            "Pressed": "Main\\Climate.png",
+            "Released": "Main\\Climate.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "wakeup",
+            "X": 13,
+            "Y": 388,
+            "Width": 151,
+            "Height": 72,
+            "Pressed": "Main\\wakeup_on_2.png",
+            "Released": "Main\\wakeup_off_2.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "blinds",
+            "X": 164,
+            "Y": 388,
+            "Width": 151,
+            "Height": 72,
+            "Pressed": "Main\\Blinds_on.png",
+            "Released": "Main\\blinds_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "bedtime",
+            "X": 316,
+            "Y": 388,
+            "Width": 151,
+            "Height": 72,
+            "Pressed": "Main\\Bedtime_on_2.png",
+            "Released": "Main\\Bedtime_off_2.png"
+          },
+          {
+            "Type": "CircleProgress",
+            "Name": "climate_progress",
+            "X": 63,
+            "Y": 82,
+            "Width": 126,
+            "Height": 89,
+            "Visible": false,
+            "FileNameProgress": "Main\\climate_wheel_small_1.png",
+            "Color": {
+              "Green": 240,
+              "Blue": 255
+            },
+            "CenterX": 75.5,
+            "CenterY": 83.0,
+            "Radius": 60.5,
+            "LineWidth": 100.0,
+            "StartAngle": 270.0,
+            "EndAngle": 450.0,
+            "CapPrecision": "Round",
+            "FileNameBackground": "Main\\climate_wheel_bg_small.png",
+            "ProgressRangeMax": 50,
+            "ProgressInitialValue": 38
+          },
+          {
+            "Type": "TextArea",
+            "Name": "climate_h3",
+            "X": 66,
+            "Y": 177,
+            "Width": 120,
+            "Height": 18,
+            "TextId": "__SingleUse_9T3V",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 155,
+              "Green": 206,
+              "Blue": 249
+            },
+            "Wildcard1": {
+              "TextId": "climate_status",
+              "UseBuffer": true,
+              "BufferSize": 20
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "Lights",
+            "X": 244,
+            "Y": 43,
+            "Width": 223,
+            "Height": 167,
+            "Pressed": "Main\\lights.png",
+            "Released": "Main\\lights.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "light_bulb_main",
+            "X": 336,
+            "Y": 88,
+            "Width": 38,
+            "Height": 61,
+            "RelativeFilename": "Main\\light_on_big.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lights_count",
+            "X": 304,
+            "Y": 138,
+            "Width": 35,
+            "Height": 60,
+            "TextId": "__SingleUse_OQP1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "lights_",
+              "UseBuffer": true,
+              "BufferSize": 7
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "on",
+            "X": 374,
+            "Y": 161,
+            "Width": 38,
+            "Height": 34,
+            "TextId": "__SingleUse_1NXF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Button",
+            "Name": "Security",
+            "X": 244,
+            "Y": 217,
+            "Width": 222,
+            "Height": 167,
+            "Pressed": "Main\\security.png",
+            "Released": "Main\\security.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "padlock_main",
+            "X": 338,
+            "Y": 263,
+            "Width": 34,
+            "Height": 47,
+            "RelativeFilename": "Main\\locked_small.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "front_door_text",
+            "X": 302,
+            "Y": 319,
+            "Width": 106,
+            "Height": 26,
+            "TextId": "__SingleUse_CMKS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "security_status",
+            "X": 317,
+            "Y": 348,
+            "Width": 77,
+            "Height": 18,
+            "TextId": "__SingleUse_7FTV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 112,
+              "Green": 172,
+              "Blue": 244
+            },
+            "Wildcard1": {
+              "TextId": "security_status",
+              "UseBuffer": true,
+              "BufferSize": 12
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "Music",
+            "X": 14,
+            "Y": 217,
+            "Width": 223,
+            "Height": 167,
+            "Pressed": "Main\\Music.png",
+            "Released": "Main\\Music.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "album_cover_small",
+            "X": 32,
+            "Y": 268,
+            "Width": 61,
+            "Height": 61,
+            "RelativeFilename": "Main\\Album_1.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "music_track_main",
+            "X": 107,
+            "Y": 277,
+            "Width": 113,
+            "Height": 18,
+            "TextId": "__SingleUse_9SBH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "music_track"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "music_artist_main",
+            "X": 107,
+            "Y": 300,
+            "Width": 87,
+            "Height": 15,
+            "TextId": "__SingleUse_AW3P",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "music_artist"
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "back_main",
+            "X": 50,
+            "Y": 346,
+            "Width": 25,
+            "Height": 16,
+            "Pressed": "Main\\back_small.png",
+            "Released": "Main\\back_small.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "skip_main",
+            "X": 174,
+            "Y": 346,
+            "Width": 24,
+            "Height": 16,
+            "Pressed": "Main\\skip_small.png",
+            "Released": "Main\\skip_small.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "play_pause_main",
+            "X": 117,
+            "Y": 343,
+            "Width": 19,
+            "Height": 22,
+            "Pressed": "Main\\pause_small.png",
+            "Released": "Main\\play_small.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "back_1",
+            "X": 15,
+            "Y": 6,
+            "Width": 45,
+            "Height": 30,
+            "Pressed": "Main\\back_clicked_2.png",
+            "Released": "Main\\back_unclicked_2.png"
+          },
+          {
+            "Type": "CircleProgress",
+            "Name": "climate_wheel_2",
+            "X": 63,
+            "Y": 82,
+            "Width": 126,
+            "Height": 89,
+            "Color": {
+              "Red": 74,
+              "Green": 150,
+              "Blue": 236
+            },
+            "CenterX": 63.1,
+            "CenterY": 62.6,
+            "Radius": 59.7,
+            "LineWidth": 5.8,
+            "StartAngle": 248.0,
+            "EndAngle": 472.5,
+            "CapPrecision": "Round",
+            "FileNameBackground": "Main\\climate_wheel_bg_small.png",
+            "ProgressRangeMax": 100,
+            "ProgressInitialValue": 100
+          },
+          {
+            "Type": "TextArea",
+            "Name": "climate_temp",
+            "X": 77,
+            "Y": 111,
+            "Width": 100,
+            "Height": 60,
+            "TextId": "__SingleUse_KRRR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "climate_temp",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "climate_dot_main",
+            "X": 175,
+            "Y": 161,
+            "Width": 12,
+            "Height": 12,
+            "RelativeFilename": "Main\\climate_circle_small.png"
+          },
+          {
+            "Type": "AnimatedImage",
+            "Name": "music_ani_main",
+            "X": 186,
+            "Y": 224,
+            "Width": 40,
+            "Height": 40,
+            "FileNameFirst": "music_ani_large\\music_ani_large_00000.png",
+            "FileNameLast": "music_ani_large\\music_ani_large_00029.png",
+            "UpdateTicksInterval": 60,
+            "StartOnLoad": true,
+            "LoopEnabled": true,
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "music_off_main",
+            "X": 188,
+            "Y": 225,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "Music\\music_off_3.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "star_1",
+            "X": 351,
+            "Y": 415,
+            "Width": 9,
+            "Height": 9,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\star.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 4.5,
+            "YOrigo": 4.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "star_2",
+            "X": 345,
+            "Y": 409,
+            "Width": 9,
+            "Height": 9,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\star.png",
+            "LockBitmapToCenter": true,
+            "Scale": 0.6,
+            "LockOrigoToCenter": true,
+            "XOrigo": 4.5,
+            "YOrigo": 4.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "sun_beams",
+            "X": 28,
+            "Y": 408,
+            "Width": 32,
+            "Height": 32,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\sun_beams.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 16.0,
+            "YOrigo": 16.0,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "sun_body",
+            "X": 36,
+            "Y": 416,
+            "Width": 16,
+            "Height": 16,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\sun_body.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 8.0,
+            "YOrigo": 8.0,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "climate",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Climate"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Climate"
+            }
+          },
+          {
+            "InteractionName": "lights",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Lights"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Lights"
+            }
+          },
+          {
+            "InteractionName": "music",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Music"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Music"
+            }
+          },
+          {
+            "InteractionName": "security",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Security"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Security"
+            }
+          },
+          {
+            "InteractionName": "back_1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Default"
+            }
+          },
+          {
+            "InteractionName": "onSkipMainClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "skip_main"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onSkipMainClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_main"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBackMainClicked"
+            }
+          },
+          {
+            "InteractionName": "onPlayPauseMainClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "play_pause_main"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onPlayPauseMainClicked"
+            }
+          },
+          {
+            "InteractionName": "onBedtimeClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "bedtime"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBedtimeClicked"
+            }
+          },
+          {
+            "InteractionName": "onWakeupClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "wakeup"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onWakeupClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Climate",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Button",
+            "Name": "back_2",
+            "X": 15,
+            "Y": 6,
+            "Width": 45,
+            "Height": 30,
+            "Pressed": "Main\\back_clicked_2.png",
+            "Released": "Main\\back_unclicked_2.png"
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 426,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_UCER",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Climate_text",
+            "X": 213,
+            "Y": 7,
+            "Width": 54,
+            "Height": 18,
+            "TextId": "__SingleUse_RUJO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "CircleProgress",
+            "Name": "climate_wheel",
+            "X": 116,
+            "Y": 66,
+            "Width": 250,
+            "Height": 177,
+            "Visible": false,
+            "FileNameProgress": "Climate\\climate_wheel_bg.png",
+            "Color": {
+              "Green": 240,
+              "Blue": 255
+            },
+            "CenterX": 100.0,
+            "CenterY": 80.0,
+            "Radius": 100.0,
+            "LineWidth": 500.0,
+            "StartAngle": 250.0,
+            "EndAngle": 472.5,
+            "CapPrecision": "Round",
+            "FileNameBackground": "Climate\\climate_wheel_bg.png",
+            "ProgressRangeMax": 50,
+            "ProgressInitialValue": 25,
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "climate_temp",
+            "X": 155,
+            "Y": 122,
+            "Width": 173,
+            "Height": 121,
+            "TextId": "__SingleUse_08D4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "main_temp",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "auto_mode",
+            "X": 30,
+            "Y": 334,
+            "Width": 143,
+            "Height": 111,
+            "Pressed": "Climate\\auto_button_white_2.png",
+            "Released": "Climate\\auto_button_black_2.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "fan_toggle",
+            "X": 169,
+            "Y": 334,
+            "Width": 143,
+            "Height": 111,
+            "Pressed": "Climate\\fan_button_white_2.png",
+            "Released": "Climate\\fan_button_black_2.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "eco",
+            "X": 308,
+            "Y": 334,
+            "Width": 143,
+            "Height": 111,
+            "Pressed": "Climate\\eco_on.png",
+            "Released": "Climate\\eco_off.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "minus_climate",
+            "X": 64,
+            "Y": 260,
+            "Width": 54,
+            "Height": 54,
+            "Pressed": "Climate\\minus_climate_on.png",
+            "Released": "Climate\\minus_climate_off.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "plus_climate",
+            "X": 365,
+            "Y": 260,
+            "Width": 54,
+            "Height": 54,
+            "Pressed": "Climate\\plus_climate_on.png",
+            "Released": "Climate\\plus_climate_off.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "climate_h1_text",
+            "X": 136,
+            "Y": 252,
+            "Width": 210,
+            "Height": 34,
+            "TextId": "__SingleUse_1UQX",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 74,
+              "Green": 150,
+              "Blue": 236
+            },
+            "Wildcard1": {
+              "TextId": "cooling"
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "climate_h2_text",
+            "X": 186,
+            "Y": 298,
+            "Width": 108,
+            "Height": 23,
+            "TextId": "__SingleUse_9HP6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 161,
+              "Green": 161,
+              "Blue": 161
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "CircleProgress",
+            "Name": "climate_wheel_1",
+            "X": 116,
+            "Y": 66,
+            "Width": 250,
+            "Height": 177,
+            "Color": {
+              "Red": 74,
+              "Green": 150,
+              "Blue": 236
+            },
+            "CenterX": 125.0,
+            "CenterY": 125.8,
+            "Radius": 119.5,
+            "LineWidth": 11.0,
+            "StartAngle": 248.0,
+            "EndAngle": 472.1,
+            "CapPrecision": "Round",
+            "FileNameBackground": "Climate\\climate_wheel_bg.png",
+            "ProgressRangeMax": 100,
+            "ProgressInitialValue": 100,
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "climate_dot",
+            "X": 340,
+            "Y": 219,
+            "Width": 24,
+            "Height": 24,
+            "RelativeFilename": "Climate\\circle_indicator.png"
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "auto_circle",
+            "X": 85,
+            "Y": 355,
+            "Width": 35,
+            "Height": 35,
+            "RenderingAlgorithm": "Bilinear Interpolation",
+            "FileNameImage": "Climate\\auto_white.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "XOrigo": 16.8,
+            "YOrigo": 16.8,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0,
+            "Moveable": true
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "fan_1",
+            "X": 222,
+            "Y": 356,
+            "Width": 36,
+            "Height": 35,
+            "RenderingAlgorithm": "Bilinear Interpolation",
+            "FileNameImage": "Climate\\fan_white.png",
+            "LockBitmapToCenter": true,
+            "XAngle": 0.1,
+            "Scale": 1.0,
+            "XOrigo": 17.75,
+            "YOrigo": 17.4,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0,
+            "Moveable": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back_2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_2"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "onPlusClimateClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "plus_climate"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onPlusClimateClicked"
+            }
+          },
+          {
+            "InteractionName": "onMinusClimateClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "minus_climate"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onMinusClimateClicked"
+            }
+          },
+          {
+            "InteractionName": "onFanToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "fan_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onFanToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onAutoModeClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "auto_mode"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onAutoModeClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Lights",
+        "Components": [
+          {
+            "Type": "Button",
+            "Name": "back_2",
+            "X": 15,
+            "Y": 6,
+            "Width": 45,
+            "Height": 30,
+            "Pressed": "Main\\back_clicked_2.png",
+            "Released": "Main\\back_unclicked_2.png"
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 426,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_GTO2",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "TextArea",
+            "Name": "light_text",
+            "X": 219,
+            "Y": 7,
+            "Width": 43,
+            "Height": 18,
+            "TextId": "__SingleUse_STD9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "light_bg",
+            "X": 14,
+            "Y": 50,
+            "Width": 453,
+            "Height": 80,
+            "RelativeFilename": "Lights\\light_bg_section.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "lr_light",
+            "X": 49,
+            "Y": 73,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_off_small.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "lr_light_on",
+            "X": 49,
+            "Y": 73,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_on_small.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Slider",
+            "Name": "lr_slider",
+            "X": 98,
+            "Y": 90,
+            "Width": 260,
+            "Height": 17,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Lights\\light_bar_bg.png",
+            "BackgroundSelected": "Lights\\light_bar_main.png",
+            "Indicator": "Lights\\light_bar_slider.png",
+            "BackgroundY": 5,
+            "IndicatorMax": 243,
+            "ValueMax": 400,
+            "InitValue": 400
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "lr_toggle",
+            "X": 382,
+            "Y": 73,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\yellow_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "living_room",
+            "X": 98,
+            "Y": 64,
+            "Width": 106,
+            "Height": 23,
+            "TextId": "__SingleUse_2WDC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "kitchen_bg",
+            "X": 14,
+            "Y": 130,
+            "Width": 453,
+            "Height": 80,
+            "RelativeFilename": "Lights\\light_bg_section.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "kitchen_light",
+            "X": 49,
+            "Y": 152,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_off_small.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "kitchen_light_on",
+            "X": 49,
+            "Y": 152,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_on_small.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Slider",
+            "Name": "kitchen_slider",
+            "X": 98,
+            "Y": 171,
+            "Width": 260,
+            "Height": 17,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Lights\\light_bar_bg.png",
+            "BackgroundSelected": "Lights\\light_bar_main.png",
+            "Indicator": "Lights\\light_bar_slider.png",
+            "BackgroundY": 5,
+            "IndicatorMax": 243,
+            "ValueMax": 400,
+            "InitValue": 200
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "kitchen_toggle",
+            "X": 382,
+            "Y": 151,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\yellow_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "kitchen",
+            "X": 98,
+            "Y": 144,
+            "Width": 68,
+            "Height": 23,
+            "TextId": "__SingleUse_IQRM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "hallway_bg",
+            "X": 14,
+            "Y": 210,
+            "Width": 453,
+            "Height": 80,
+            "RelativeFilename": "Lights\\light_bg_section.png"
+          },
+          {
+            "Type": "Slider",
+            "Name": "hallway_slider",
+            "X": 98,
+            "Y": 252,
+            "Width": 260,
+            "Height": 17,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Lights\\light_bar_bg.png",
+            "BackgroundSelected": "Lights\\light_bar_main.png",
+            "Indicator": "Lights\\light_bar_slider.png",
+            "BackgroundY": 5,
+            "IndicatorMax": 243,
+            "ValueMax": 400,
+            "InitValue": 310
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hallway",
+            "X": 98,
+            "Y": 226,
+            "Width": 73,
+            "Height": 23,
+            "TextId": "__SingleUse_668E",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "hallway_toggle",
+            "X": 382,
+            "Y": 231,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\yellow_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "hallway_light",
+            "X": 49,
+            "Y": 232,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_off_small.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "hallway_light_on",
+            "X": 49,
+            "Y": 232,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_on_small.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "conservatory_bg",
+            "X": 14,
+            "Y": 290,
+            "Width": 453,
+            "Height": 80,
+            "RelativeFilename": "Lights\\light_bg_section.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "conservatory_light",
+            "X": 49,
+            "Y": 312,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_off_small.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "conservatory_light_on",
+            "X": 49,
+            "Y": 312,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_on_small.png"
+          },
+          {
+            "Type": "Slider",
+            "Name": "conservatory_slider",
+            "X": 98,
+            "Y": 332,
+            "Width": 260,
+            "Height": 17,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Lights\\light_bar_bg.png",
+            "BackgroundSelected": "Lights\\light_line_off.png",
+            "Indicator": "Lights\\light_bar_slider.png",
+            "BackgroundY": 5,
+            "IndicatorMax": 243,
+            "ValueMax": 400,
+            "InitValue": 150
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "conservatory_toggle",
+            "X": 382,
+            "Y": 311,
+            "Width": 66,
+            "Height": 40,
+            "Pressed": "Lights\\yellow_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "conservatory",
+            "X": 99,
+            "Y": 306,
+            "Width": 121,
+            "Height": 23,
+            "TextId": "__SingleUse_MV05",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "all_on_button",
+            "X": 16,
+            "Y": 373,
+            "Width": 148,
+            "Height": 83,
+            "Pressed": "Lights\\all_on_2.png",
+            "Released": "Lights\\all_on_off_2.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "ambient_button",
+            "X": 167,
+            "Y": 373,
+            "Width": 148,
+            "Height": 83,
+            "Pressed": "Lights\\ambient_on.png",
+            "Released": "Lights\\ambient_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "bedtime",
+            "X": 319,
+            "Y": 373,
+            "Width": 148,
+            "Height": 83,
+            "Pressed": "Lights\\all_off_on_2.png",
+            "Released": "Lights\\all_off_off_2.png"
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "star_1",
+            "X": 362,
+            "Y": 405,
+            "Width": 9,
+            "Height": 9,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\star.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 4.5,
+            "YOrigo": 4.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "star_2",
+            "X": 355,
+            "Y": 398,
+            "Width": 9,
+            "Height": 9,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\star.png",
+            "LockBitmapToCenter": true,
+            "Scale": 0.6,
+            "LockOrigoToCenter": true,
+            "XOrigo": 4.5,
+            "YOrigo": 4.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "sun_body",
+            "X": 45,
+            "Y": 405,
+            "Width": 20,
+            "Height": 21,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\sun_body.png",
+            "LockBitmapToCenter": true,
+            "XBitmapPosition": 2.0,
+            "YBitmapPosition": 2.5,
+            "Scale": 1.2,
+            "LockOrigoToCenter": true,
+            "XOrigo": 10.0,
+            "YOrigo": 10.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "sun_beams",
+            "X": 36,
+            "Y": 396,
+            "Width": 38,
+            "Height": 38,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\sun_beams.png",
+            "LockBitmapToCenter": true,
+            "XBitmapPosition": 3.0,
+            "YBitmapPosition": 3.0,
+            "Scale": 1.2,
+            "LockOrigoToCenter": true,
+            "XOrigo": 19.0,
+            "YOrigo": 19.0,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back_3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_2"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "onLRToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "lr_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onLRToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onKitchenToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "kitchen_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onKitchenToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onHallwayToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "hallway_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onHallwayToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onConservatoryToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "conservatory_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onConservatoryToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onBedtimeClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "bedtime"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBedtimeClicked"
+            }
+          },
+          {
+            "InteractionName": "onAllbuttonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "all_on_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onAllbuttonClicked"
+            }
+          },
+          {
+            "InteractionName": "onLRSliderChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "lr_slider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onLRSliderChanged"
+            }
+          },
+          {
+            "InteractionName": "onKitchenSliderChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "kitchen_slider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onKitchenSliderChanged"
+            }
+          },
+          {
+            "InteractionName": "onHallwaySliderChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "hallway_slider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onHallwaySliderChanged"
+            }
+          },
+          {
+            "InteractionName": "onConservatorySliderChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "conservatory_slider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onConservatorySliderChanged"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Security",
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "security_text",
+            "X": 210,
+            "Y": 7,
+            "Width": 60,
+            "Height": 18,
+            "TextId": "__SingleUse_D3PM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Button",
+            "Name": "back_3",
+            "X": 15,
+            "Y": 6,
+            "Width": 45,
+            "Height": 30,
+            "Pressed": "Main\\back_clicked_2.png",
+            "Released": "Main\\back_unclicked_2.png"
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 426,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_2O3E",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "lock_all_button",
+            "X": 14,
+            "Y": 381,
+            "Width": 453,
+            "Height": 78,
+            "Pressed": "Security\\lock_all_big.png",
+            "Released": "Security\\unlock_all_big.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "s_blue_bg_back",
+            "X": 14,
+            "Y": 43,
+            "Width": 451,
+            "Height": 138,
+            "RelativeFilename": "Security\\security_main_dark.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "s_blue_bg",
+            "X": 14,
+            "Y": 43,
+            "Width": 451,
+            "Height": 138,
+            "RelativeFilename": "Security\\security_main_bg.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "s_small_bg_1",
+            "X": 15,
+            "Y": 183,
+            "Width": 451,
+            "Height": 64,
+            "RelativeFilename": "Security\\security_small_bg.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "s_small_bg_2",
+            "X": 15,
+            "Y": 250,
+            "Width": 451,
+            "Height": 64,
+            "RelativeFilename": "Security\\security_small_bg.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "s_small_bg_3",
+            "X": 15,
+            "Y": 317,
+            "Width": 451,
+            "Height": 64,
+            "RelativeFilename": "Security\\security_small_bg.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "blue_padlock",
+            "X": 55,
+            "Y": 75,
+            "Width": 53,
+            "Height": 74,
+            "Visible": false,
+            "RelativeFilename": "Security\\blue_padlock.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "front_door",
+            "X": 132,
+            "Y": 80,
+            "Width": 91,
+            "Height": 23,
+            "TextId": "__SingleUse_QVWS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "front_door_status",
+            "X": 131,
+            "Y": 110,
+            "Width": 123,
+            "Height": 34,
+            "TextId": "__SingleUse_4XFU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 112,
+              "Green": 172,
+              "Blue": 244
+            },
+            "Wildcard1": {
+              "TextId": "front_door_status",
+              "UseBuffer": true,
+              "BufferSize": 24
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "Door",
+            "X": 66,
+            "Y": 192,
+            "Width": 32,
+            "Height": 47,
+            "RelativeFilename": "Security\\door.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "Door_1",
+            "X": 59,
+            "Y": 261,
+            "Width": 46,
+            "Height": 43,
+            "RelativeFilename": "Security\\garage.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "Door_1_1",
+            "X": 66,
+            "Y": 330,
+            "Width": 32,
+            "Height": 38,
+            "RelativeFilename": "Security\\sheild_tick.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "back_door",
+            "X": 132,
+            "Y": 192,
+            "Width": 90,
+            "Height": 23,
+            "TextId": "__SingleUse_G75F",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "back_door_status",
+            "X": 132,
+            "Y": 219,
+            "Width": 74,
+            "Height": 18,
+            "TextId": "__SingleUse_4NY4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 112,
+              "Green": 172,
+              "Blue": 244
+            },
+            "Wildcard1": {
+              "TextId": "back_door_status",
+              "UseBuffer": true,
+              "BufferSize": 14
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "garage",
+            "X": 132,
+            "Y": 259,
+            "Width": 66,
+            "Height": 23,
+            "TextId": "__SingleUse_4K3I",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "garage_status",
+            "X": 132,
+            "Y": 286,
+            "Width": 116,
+            "Height": 18,
+            "TextId": "__SingleUse_QDHN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 112,
+              "Green": 172,
+              "Blue": 244
+            },
+            "Wildcard1": {
+              "TextId": "garage_status",
+              "UseBuffer": true,
+              "BufferSize": 33
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "alarm",
+            "X": 132,
+            "Y": 326,
+            "Width": 123,
+            "Height": 23,
+            "TextId": "__SingleUse_6US7",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "alarm_status",
+            "X": 131,
+            "Y": 353,
+            "Width": 70,
+            "Height": 18,
+            "TextId": "__SingleUse_WXCT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 112,
+              "Green": 172,
+              "Blue": 244
+            },
+            "Wildcard1": {
+              "TextId": "alarm_status",
+              "UseBuffer": true,
+              "BufferSize": 14
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "alarm_toggle",
+            "X": 375,
+            "Y": 330,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\blue_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "garage_toggle",
+            "X": 375,
+            "Y": 263,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\blue_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "back_door_toggle",
+            "X": 375,
+            "Y": 196,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\blue_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "front_door_toggle",
+            "X": 375,
+            "Y": 93,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\blue_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "blue_lock",
+            "X": 78,
+            "Y": 66,
+            "Width": 40,
+            "Height": 51,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Security\\blue_lock.png",
+            "LockBitmapToCenter": true,
+            "YAngle": 3.0,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 20.0,
+            "YOrigo": 25.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0,
+            "Fadeable": true,
+            "Moveable": true
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "blue_body",
+            "X": 40,
+            "Y": 107,
+            "Width": 53,
+            "Height": 45,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Security\\blue_body.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 26.5,
+            "YOrigo": 22.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0,
+            "Fadeable": true,
+            "Moveable": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back_4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_3"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "onFrontDoorToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "front_door_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onFrontDoorToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onBackDoorToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_door_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBackDoorToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onGarageToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "garage_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onGarageToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onAlarmToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "alarm_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onAlarmToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onLockAllToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "lock_all_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onLockAllToggleClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Music",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "FM_blurred_bg",
+            "X": 1,
+            "Width": 481,
+            "Height": 481,
+            "RelativeFilename": "Music\\FM_bg.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "back_5",
+            "X": 15,
+            "Y": 6,
+            "Width": 45,
+            "Height": 30,
+            "Pressed": "Main\\back_clicked_2.png",
+            "Released": "Main\\back_unclicked_2.png"
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 426,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_FQ0V",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "TextArea",
+            "Name": "security_text",
+            "X": 205,
+            "Y": 7,
+            "Width": 44,
+            "Height": 18,
+            "TextId": "__SingleUse_CTZD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "album_cover",
+            "X": 15,
+            "Y": 46,
+            "Width": 172,
+            "Height": 172,
+            "RelativeFilename": "Music\\cover_art_FM.png"
+          },
+          {
+            "Type": "Slider",
+            "Name": "timeline_music",
+            "X": 8,
+            "Y": 236,
+            "Width": 467,
+            "Height": 17,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Music\\music_timeline_bg.png",
+            "BackgroundSelected": "Music\\music_timeline_front.png",
+            "Indicator": "Music\\large_time_slide.png",
+            "BackgroundX": 7,
+            "BackgroundY": 6,
+            "IndicatorMax": 450,
+            "IndicatorMin": 1,
+            "ValueMax": 300
+          },
+          {
+            "Type": "TextArea",
+            "Name": "music_track",
+            "X": 205,
+            "Y": 128,
+            "Width": 250,
+            "Height": 34,
+            "TextId": "__SingleUse_A37C",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "music_track_large"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "music_artist",
+            "X": 206,
+            "Y": 175,
+            "Width": 138,
+            "Height": 23,
+            "TextId": "__SingleUse_T5IQ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 199,
+              "Green": 199,
+              "Blue": 199
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "music_artist_large"
+            }
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "play_pause_music",
+            "X": 220,
+            "Y": 275,
+            "Width": 41,
+            "Height": 47,
+            "Pressed": "Music\\large_pause.png",
+            "Released": "Music\\large_play.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "skip_music",
+            "X": 332,
+            "Y": 282,
+            "Width": 52,
+            "Height": 33,
+            "Pressed": "Music\\large_skip.png",
+            "Released": "Music\\large_skip.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "back_music",
+            "X": 91,
+            "Y": 282,
+            "Width": 52,
+            "Height": 33,
+            "Pressed": "Music\\large_back.png",
+            "Released": "Music\\large_back.png"
+          },
+          {
+            "Type": "Slider",
+            "Name": "volume_slider",
+            "X": 53,
+            "Y": 346,
+            "Width": 373,
+            "Height": 17,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Music\\volume_slide_bg.png",
+            "BackgroundSelected": "Music\\volume_slide_main.png",
+            "Indicator": "Music\\large_time_slide.png",
+            "BackgroundX": 7,
+            "BackgroundY": 6,
+            "IndicatorMax": 356,
+            "IndicatorMin": 1,
+            "ValueMax": 100,
+            "InitValue": 70
+          },
+          {
+            "Type": "Image",
+            "Name": "speaker_mute",
+            "X": 23,
+            "Y": 346,
+            "Width": 14,
+            "Height": 18,
+            "RelativeFilename": "Music\\speaker_mute_small.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "speaker_mute_1",
+            "X": 438,
+            "Y": 345,
+            "Width": 24,
+            "Height": 19,
+            "RelativeFilename": "Music\\speaker_loud_small.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "time_remaining",
+            "X": 441,
+            "Y": 259,
+            "Width": 30,
+            "Height": 15,
+            "TextId": "__SingleUse_JMQD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "time_remaining_wc"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "time_elapsed",
+            "X": 11,
+            "Y": 259,
+            "Width": 24,
+            "Height": 15,
+            "TextId": "__SingleUse_72EN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "time_elapsed_wc"
+            }
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "lr_music",
+            "X": 15,
+            "Y": 381,
+            "Width": 148,
+            "Height": 84,
+            "InitialStatePressed": true,
+            "Pressed": "Music\\living_music_on.png",
+            "Released": "Music\\Living_music_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "kitchen_music",
+            "X": 166,
+            "Y": 381,
+            "Width": 148,
+            "Height": 84,
+            "Pressed": "Music\\kitchen_music_on.png",
+            "Released": "Music\\kitchen_music_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "bedroom_music",
+            "X": 317,
+            "Y": 381,
+            "Width": 148,
+            "Height": 84,
+            "Pressed": "Music\\bedroom_music_on.png",
+            "Released": "Music\\bedroom_music_off.png"
+          },
+          {
+            "Type": "AnimatedImage",
+            "Name": "music_ani_music",
+            "X": 253,
+            "Y": -2,
+            "Width": 40,
+            "Height": 40,
+            "FileNameFirst": "music_ani_large\\music_ani_large_00000.png",
+            "FileNameLast": "music_ani_large\\music_ani_large_00029.png",
+            "UpdateTicksInterval": 60,
+            "LoopEnabled": true,
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "music_off",
+            "X": 254,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "Music\\music_off_3.png",
+            "Fadeable": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "onSkipClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "skip_music"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onSkipClicked"
+            }
+          },
+          {
+            "InteractionName": "onBackClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_music"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBackClicked"
+            }
+          },
+          {
+            "InteractionName": "onPlayPauseClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "play_pause_music"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onPlayPauseClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionNone"
+            }
+          },
+          {
+            "InteractionName": "back_5",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_5"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
             }
           }
         ]
@@ -265,7 +2454,7 @@
       "Height": 480
     },
     "SelectedColorDepth": 32,
-    "StartupScreenName": "screen",
+    "StartupScreenName": "Splash",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
