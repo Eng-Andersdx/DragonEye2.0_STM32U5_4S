@@ -10,6 +10,7 @@
 "./Application/User/TouchGFX/target/DragonEye/Components/mx25um51245g.o"
 "./Application/User/TouchGFX/target/DragonEye/Components/stm32u5x9j_discovery_ospi.o"
 "./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.o"
+"./Application/User/TouchGFX/target/DragonEye/dragoneye_wifi.o"
 "./Application/User/TouchGFX/target/STM32TouchController.o"
 "./Application/User/TouchGFX/target/TouchGFXGPIO.o"
 "./Application/User/TouchGFX/target/TouchGFXHAL.o"

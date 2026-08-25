@@ -5,13 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Application/User/TouchGFX/target/DragonEye/dragoneye_leds.c 
+../Application/User/TouchGFX/target/DragonEye/dragoneye_leds.c \
+../Application/User/TouchGFX/target/DragonEye/dragoneye_wifi.c 
 
 C_DEPS += \
-./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.d 
+./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.d \
+./Application/User/TouchGFX/target/DragonEye/dragoneye_wifi.d 
 
 OBJS += \
-./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.o 
+./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.o \
+./Application/User/TouchGFX/target/DragonEye/dragoneye_wifi.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +24,7 @@ Application/User/TouchGFX/target/DragonEye/%.o Application/User/TouchGFX/target/
 clean: clean-Application-2f-User-2f-TouchGFX-2f-target-2f-DragonEye
 
 clean-Application-2f-User-2f-TouchGFX-2f-target-2f-DragonEye:
-	-$(RM) ./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.cyclo ./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.d ./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.o ./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.su
+	-$(RM) ./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.cyclo ./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.d ./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.o ./Application/User/TouchGFX/target/DragonEye/dragoneye_leds.su ./Application/User/TouchGFX/target/DragonEye/dragoneye_wifi.cyclo ./Application/User/TouchGFX/target/DragonEye/dragoneye_wifi.d ./Application/User/TouchGFX/target/DragonEye/dragoneye_wifi.o ./Application/User/TouchGFX/target/DragonEye/dragoneye_wifi.su
 
 .PHONY: clean-Application-2f-User-2f-TouchGFX-2f-target-2f-DragonEye
 
