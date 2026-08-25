@@ -33,6 +33,7 @@
 #define DEU5_4S
  //#define DEU5_5R
 #define PWM_LED
+#define st1x33i_480x480
 
 typedef enum
 {

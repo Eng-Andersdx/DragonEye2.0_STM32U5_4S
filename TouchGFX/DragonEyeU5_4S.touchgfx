@@ -3,7 +3,43 @@
     "Screens": [
       {
         "Name": "screen",
+        "CanvasBufferSize": 7200,
         "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "flexButton1",
+            "Width": 480,
+            "Height": 480,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 480,
+                "Height": 480,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
           {
             "Type": "Box",
             "Name": "box1",
@@ -14,9 +50,212 @@
               "Green": 255,
               "Blue": 255
             }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 45,
+            "Y": 307,
+            "Width": 86,
+            "Height": 79,
+            "Color": {
+              "Red": 240,
+              "Green": 7,
+              "Blue": 7
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle1",
+            "X": 210,
+            "Y": 306,
+            "Width": 80,
+            "Height": 80,
+            "Color": {
+              "Red": 15,
+              "Green": 242,
+              "Blue": 49
+            },
+            "CenterX": 40.0,
+            "CenterY": 40.0,
+            "Radius": 40.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Shape",
+            "Name": "shape1",
+            "X": 358,
+            "Y": 306,
+            "Width": 80,
+            "Height": 80,
+            "Color": {
+              "Red": 12,
+              "Green": 121,
+              "Blue": 245
+            },
+            "Points": [
+              {
+                "X": 40.0
+              },
+              {
+                "X": 80.0,
+                "Y": 40.0
+              },
+              {
+                "X": 40.0,
+                "Y": 80.0
+              },
+              {
+                "Y": 40.0
+              }
+            ],
+            "XScale": 1.0,
+            "YScale": 1.0
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButton1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen_1"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "screen_1",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "flexButton1",
+            "Width": 480,
+            "Height": 480,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 480,
+                "Height": 480,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 480,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 39,
+            "Y": 68,
+            "Width": 86,
+            "Height": 79,
+            "Color": {
+              "Red": 240,
+              "Green": 7,
+              "Blue": 7
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle1",
+            "X": 200,
+            "Y": 67,
+            "Width": 80,
+            "Height": 80,
+            "Color": {
+              "Red": 15,
+              "Green": 242,
+              "Blue": 49
+            },
+            "CenterX": 40.0,
+            "CenterY": 40.0,
+            "Radius": 40.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Shape",
+            "Name": "shape1",
+            "X": 358,
+            "Y": 68,
+            "Width": 80,
+            "Height": 80,
+            "Color": {
+              "Red": 12,
+              "Green": 121,
+              "Blue": 245
+            },
+            "Points": [
+              {
+                "X": 40.0
+              },
+              {
+                "X": 80.0,
+                "Y": 40.0
+              },
+              {
+                "X": 40.0,
+                "Y": 80.0
+              },
+              {
+                "Y": 40.0
+              }
+            ],
+            "XScale": 1.0,
+            "YScale": 1.0
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButton1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "screen"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],
